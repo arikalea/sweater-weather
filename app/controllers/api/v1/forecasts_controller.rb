@@ -16,18 +16,19 @@ class Api::V1::ForecastsController < ApplicationController
     lat = lat_long[:lat]
     long = lat_long[:lng]
 
-    weather_conn = Faraday.new(url: 'https://api.openweathermap.org') do |f|
+    forecast_conn = Faraday.new(url: 'https://api.openweathermap.org') do |f|
       f.params[:appid] = ENV['WEATHER_KEY']
     end
 
-    weather_response = weather_conn.get('/data/2.5/onecall') do |f|
+    forecast_response = forecast_conn.get('/data/2.5/onecall') do |f|
       f.params[:lat] = lat
       f.params[:lon] = long
       f.params[:exclude] = 'minutely, alerts'
     end
 
-    weather_json = JSON.parse(weather_response.body, symbolize_names: true)
-
-    render json: weather_json
+    forecast_json = JSON.parse(forecast_response.body, symbolize_names: true)
+    current_forecast = CurrentForecast.new(forecast_json)
+    require "pry";binding.pry
+    # render json: forecast_json
   end
 end
