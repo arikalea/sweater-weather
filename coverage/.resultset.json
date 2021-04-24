@@ -216,6 +216,69 @@
           null
         ]
       },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/location.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/weather_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/forecast.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/current_forecast.rb": {
         "lines": [
           1,
@@ -244,8 +307,60 @@
           null,
           null
         ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/hourly_forecast.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          8,
+          8,
+          8,
+          8,
+          null,
+          null,
+          1,
+          1,
+          8,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/daily_forecast.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          null,
+          null,
+          1,
+          1,
+          5,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1619286255
+    "timestamp": 1619300944
   }
 }
