@@ -11,15 +11,15 @@ class CurrentForecast
               :icon
 
   def initialize(data)
-    @datetime = data[:current][:dt]
-    @sunrise = data[:current][:sunrise]
-    @sunset = data[:current][:sunset]
-    @temperature = data[:current][:temp]
-    @feels_like = data[:current][:feels_like]
-    @humidity = data[:current][:humidity]
-    @uvi = data[:current][:uvi]
-    @visibility = data[:current][:visibility]
-    @conditions = data[:current][:weather][0][:description]
-    @icon = data[:current][:weather][0][:icon]
+    @datetime = data[:dt]
+    @sunrise = data[:sunrise]
+    @sunset = data[:sunset]
+    @temperature = data[:temp]
+    @feels_like = data[:feels_like]
+    @humidity = data[:humidity]
+    @uvi = data[:uvi]
+    @visibility = data[:visibility]
+    @conditions = data[:weather][0][:description]
+    @icon = data[:weather][0][:icon]
   end
 end
