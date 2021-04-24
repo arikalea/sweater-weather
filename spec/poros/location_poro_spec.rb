@@ -14,7 +14,7 @@ RSpec.describe 'Location Poro' do
       expect(location_poro.city).to eq(attrs[:adminArea5])
       expect(location_poro.state).to eq(attrs[:adminArea3])
       expect(location_poro.country).to eq(attrs[:adminArea1])
-      expect(location_poro.coordinates).to eq(attrs[:latlng])
+      expect(location_poro.coordinates).to eq(attrs[:latLng])
     end
   end
 end

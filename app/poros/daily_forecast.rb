@@ -17,9 +17,9 @@ class DailyForecast
     @icon = data[:weather][0][:icon]
   end
 
-  def next_five_days(data)
+  def self.next_five_days(data)
     data.take(5).map do |daily_data|
       DailyForecast.new(daily_data)
-    end 
+    end
   end
 end

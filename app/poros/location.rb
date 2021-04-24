@@ -8,6 +8,6 @@ class Location
     @city = data[:adminArea5]
     @state = data[:adminArea3]
     @country = data[:adminArea1]
-    @coordinates = data[:latlng]
+    @coordinates = data[:latLng]
   end
 end
