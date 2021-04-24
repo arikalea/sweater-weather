@@ -18,9 +18,9 @@ RSpec.describe 'Daily forecast poro' do
       daily_forecast_poro = DailyForecast.new(attrs)
 
       expect(daily_forecast_poro).to be_a(DailyForecast)
-      expect(daily_forecast_poro.date).to eq(attrs[:dt])
-      expect(daily_forecast_poro.sunrise).to eq(attrs[:sunrise])
-      expect(daily_forecast_poro.sunset).to eq(attrs[:sunset])
+      expect(daily_forecast_poro.date).to eq(Time.at(attrs[:dt]))
+      expect(daily_forecast_poro.sunrise).to eq(Time.at(attrs[:sunrise]))
+      expect(daily_forecast_poro.sunset).to eq(Time.at(attrs[:sunset]))
       expect(daily_forecast_poro.max_temp).to eq(attrs[:temp][:max])
       expect(daily_forecast_poro.min_temp).to eq(attrs[:temp][:min])
       expect(daily_forecast_poro.conditions).to eq(attrs[:weather][0][:description])

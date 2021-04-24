@@ -15,7 +15,7 @@ RSpec.describe 'Hourly forecast poro' do
       hourly_forecast_poro = HourlyForecast.new(attrs)
 
       expect(hourly_forecast_poro).to be_a(HourlyForecast)
-      expect(hourly_forecast_poro.time).to eq(attrs[:dt])
+      expect(hourly_forecast_poro.time).to eq(Time.at(attrs[:dt]))
       expect(hourly_forecast_poro.temperature).to eq(attrs[:temp])
       expect(hourly_forecast_poro.conditions).to eq(attrs[:weather][0][:description])
       expect(hourly_forecast_poro.icon).to eq(attrs[:weather][0][:icon])
