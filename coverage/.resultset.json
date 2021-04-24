@@ -387,6 +387,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           null,
           null,
@@ -586,35 +588,8 @@
           1,
           1,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           1,
+          null,
           1,
           null,
           null
@@ -625,8 +600,16 @@
           1,
           null
         ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/serializers/forecast_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1619304234
+    "timestamp": 1619305243
   }
 }
