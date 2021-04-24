@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-04-23T12:46:45-06:00">2021-04-23T12:46:45-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-04-24T10:47:20-06:00">2021-04-24T10:47:20-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>51</b> relevant lines,
-    <span class="green"><b>51</b> lines covered</span> and
+    <b>59</b> relevant lines,
+    <span class="green"><b>59</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -73,9 +73,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#c5cb29f04bf6c669725619c9fad6e6b218ae7a5a" class="src_link" title="app/controllers/api/v1/forecasts_controller.rb">app/controllers/api/v1/forecasts_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">32</td>
             <td class="cell--number">18</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">10</td>
+            <td class="cell--number">18</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -255,8 +255,8 @@
     
 
     <div class="t-line-summary">
-      <b>10</b> relevant lines.
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>18</b> relevant lines.
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -318,7 +318,7 @@
 
             
 
-            <code class="ruby">    geo_conn = Faraday.new(url: &#39;http://www.mapquestapi.com/&#39;) do |f|</code>
+            <code class="ruby">    geo_conn = Faraday.new(url: &#39;http://www.mapquestapi.com&#39;) do |f|</code>
           </li>
         </div>
       
@@ -362,7 +362,7 @@
 
             
 
-            <code class="ruby">    geo_response = geo_conn.get(&#39;geocoding/v1/address&#39;) do |f|</code>
+            <code class="ruby">    geo_response = geo_conn.get(&#39;/geocoding/v1/address&#39;) do |f|</code>
           </li>
         </div>
       
@@ -411,13 +411,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="14">
+            
             
 
             
 
-            <code class="ruby">    lat_long = geo_json[:results][0][:locations][0][:latLng]</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -428,13 +428,24 @@
 
             
 
+            <code class="ruby">    lat_long = geo_json[:results][0][:locations][0][:latLng]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    lat = lat_long[:lat]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
             
 
             
@@ -444,7 +455,150 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    weather_conn = Faraday.new(url: &#39;https://api.openweathermap.org&#39;) do |f|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      f.params[:appid] = ENV[&#39;WEATHER_KEY&#39;]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    weather_response = weather_conn.get(&#39;/data/2.5/onecall&#39;) do |f|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      f.params[:lat] = lat</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      f.params[:lon] = long</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="28">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    weather_json = JSON.parse(weather_response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="30">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    render json: weather_json</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
@@ -455,7 +609,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="32">
             
             
 

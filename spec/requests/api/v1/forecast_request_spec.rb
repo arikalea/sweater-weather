@@ -5,12 +5,12 @@ RSpec.describe 'Forecast request' do
     it 'has successful response' do
       get '/api/v1/forecast?location=denver,co'
 
+      forecast = JSON.parse(response.body, symbolize_names: true)
+
       expect(response).to be_successful
-
-      json = JSON.parse(response.body, symbolize_names: true)
-
+      expect(response.status).to eq(200)
+      expect(forecast).to have_key(:lat)
+      expect(forecast).to have_key(:lon)
     end
-    # test that I'm getting lat and long
-    # test that I'm getting weather for location
   end
 end
