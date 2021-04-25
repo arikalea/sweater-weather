@@ -245,8 +245,52 @@
           null,
           null
         ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/location.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/weather_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1619377530
+    "timestamp": 1619377908
   }
 }
