@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.pexels.com/v1/search?orientation=landscape&per_page=1&query=Dallas,%20landscape
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - 563492ad6f91700001000001c8ce8de3332e40be9cdb1073b228da99
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Apr 2021 17:55:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '445'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cf_bm=c795f3800f297f5cdcf2ae5b7afc1fccec647723-1619373351-1800-Aaf5J8HsADOygmEPwK30zuemefpz8NwZTvle/3J8Uq/FnB8415XVtjBTJJ+unvGDhAclH2D8hX3/ox3p67QczhE=;
+        path=/; expires=Sun, 25-Apr-21 18:25:51 GMT; domain=.pexels.com; HttpOnly;
+        Secure; SameSite=None
+      - __cf_bm=e9af8e0b2ae79ceb2bf16e8628ed253af0aded2f-1619373351-1800-ARum9tk8h0DqdiloVCg1EikFRwjzfbSr39jKoxo0hAeS76ncDlxurv1KbdPNTHIfXZdhCfMx5TWTCrqoQ9QB80U=;
+        path=/; expires=Sun, 25-Apr-21 18:25:51 GMT; domain=.pexels.com; HttpOnly;
+        Secure; SameSite=None
+      - __cfduid=dbd8af5bf519f4847dde1336f11d6e5c41619373351; expires=Tue, 25-May-21
+        17:55:51 GMT; path=/; domain=.pexels.com; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=dea8abdbd74ecea88b1b7da27b645f09e1619373349; expires=Tue, 25-May-21
+        17:55:49 GMT; path=/; domain=.pexels.com; HttpOnly; SameSite=Lax; Secure
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09abc57224000005a222adf000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19985'
+      X-Ratelimit-Reset:
+      - '1621889502'
+      X-Request-Id:
+      - 28b69c61-b37e-4d2d-8af2-f84def831565
+      X-Runtime:
+      - '0.103756'
+      X-Server:
+      - master
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 645971c9d84505a2-LAX
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"per_page":1,"photos":[{"id":612936,"width":6016,"height":4016,"url":"https://www.pexels.com/photo/couple-kissing-612936/","photographer":"Quintin
+        Gellar","photographer_url":"https://www.pexels.com/@quintingellar","photographer_id":99238,"avg_color":"#BAA990","src":{"original":"https://images.pexels.com/photos/612936/pexels-photo-612936.jpeg","large2x":"https://images.pexels.com/photos/612936/pexels-photo-612936.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/612936/pexels-photo-612936.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/612936/pexels-photo-612936.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/612936/pexels-photo-612936.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/612936/pexels-photo-612936.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/612936/pexels-photo-612936.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/612936/pexels-photo-612936.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false}],"total_results":8000,"next_page":"https://api.pexels.com/v1/search/?orientation=landscape\u0026page=2\u0026per_page=1\u0026query=Dallas%2C+landscape"}'
+  recorded_at: Sun, 25 Apr 2021 17:55:51 GMT
+recorded_with: VCR 6.0.0
