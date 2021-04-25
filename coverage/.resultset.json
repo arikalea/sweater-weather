@@ -204,6 +204,17 @@
           null
         ]
       },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/spec/factories/users.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/arikablenker/turing/3module/projects/sweater-weather/config/routes.rb": {
         "lines": [
           1,
@@ -222,18 +233,18 @@
         "lines": [
           1,
           1,
-          2,
-          2,
+          5,
+          5,
+          1,
+          null,
+          4,
+          null,
+          null,
+          null,
           1,
           null,
           1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          2,
+          5,
           null,
           null
         ]
@@ -273,6 +284,6 @@
         ]
       }
     },
-    "timestamp": 1619385361
+    "timestamp": 1619386830
   }
 }
