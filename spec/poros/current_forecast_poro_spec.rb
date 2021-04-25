@@ -21,9 +21,9 @@ RSpec.describe 'Current forecast poro' do
       current_forecast_poro = CurrentForecast.new(attrs)
 
       expect(current_forecast_poro).to be_a(CurrentForecast)
-      expect(current_forecast_poro.datetime).to eq(attrs[:dt])
-      expect(current_forecast_poro.sunrise).to eq(attrs[:sunrise])
-      expect(current_forecast_poro.sunset).to eq(attrs[:sunset])
+      expect(current_forecast_poro.datetime).to eq(Time.at(attrs[:dt]))
+      expect(current_forecast_poro.sunrise).to eq(Time.at(attrs[:sunrise]))
+      expect(current_forecast_poro.sunset).to eq(Time.at(attrs[:sunset]))
       expect(current_forecast_poro.temperature).to eq(attrs[:temp])
       expect(current_forecast_poro.feels_like).to eq(attrs[:feels_like])
       expect(current_forecast_poro.humidity).to eq(attrs[:humidity])

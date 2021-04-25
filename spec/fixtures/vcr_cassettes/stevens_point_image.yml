@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.pexels.com/v1/search?orientation=landscape&per_page=1&query=Stevens%20Point,%20landscape
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - 563492ad6f91700001000001c8ce8de3332e40be9cdb1073b228da99
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Apr 2021 17:48:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '473'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cf_bm=389e392a108616403b3117fa31615cfe5d9324c9-1619372896-1800-AfNTlt4zLcA1cAESw1lAGN9TC70YNH/IPfVuPtH5lkT1OL/7f6AxPT5U2B1/3gmnu05maptxOgoVxdB96DIS8XM=;
+        path=/; expires=Sun, 25-Apr-21 18:18:16 GMT; domain=.pexels.com; HttpOnly;
+        Secure; SameSite=None
+      - __cf_bm=b4834592ef72dc3180d73d04b79d23023b9b6d98-1619372743-1800-AW23G6Z73maJDt50HMRd1OH9gd+sFjM0a6idL59CrEC+RO99rwVlqlPtCH0SxVRdp6egbXD4c1Q4Am6pq1icElI=;
+        path=/; expires=Sun, 25-Apr-21 18:15:43 GMT; domain=.pexels.com; HttpOnly;
+        Secure; SameSite=None
+      - __cfduid=d66ce336de132629ab9a9a1d452aff2d51619372743; expires=Tue, 25-May-21
+        17:45:43 GMT; path=/; domain=.pexels.com; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=dea88dec3a58f4d6d5e32548d835f92841619372896; expires=Tue, 25-May-21
+        17:48:16 GMT; path=/; domain=.pexels.com; HttpOnly; SameSite=Lax; Secure
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09abbe88960000429f7115d000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19986'
+      X-Ratelimit-Reset:
+      - '1621889502'
+      X-Request-Id:
+      - 5fb4d822-acf7-4512-a4b0-164de27bd0a8
+      X-Runtime:
+      - '0.106931'
+      X-Server:
+      - master
+      X-Tyk-Cached-Response:
+      - '1'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 645966ba8fbc429f-LAX
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYWdlIjoxLCJwZXJfcGFnZSI6MSwicGhvdG9zIjpbeyJpZCI6MTQyODYzNCwid2lkdGgiOjU2NzYsImhlaWdodCI6Mzc4NCwidXJsIjoiaHR0cHM6Ly93d3cucGV4ZWxzLmNvbS9waG90by93b21hbi1hY3Jvc3Mtc3VuLWR1cmluZy1kYXduLTE0Mjg2MzQvIiwicGhvdG9ncmFwaGVyIjoiRVnDnFAgQkVMRU4iLCJwaG90b2dyYXBoZXJfdXJsIjoiaHR0cHM6Ly93d3cucGV4ZWxzLmNvbS9AZXl1cGJlbGVuIiwicGhvdG9ncmFwaGVyX2lkIjo2MjU4NTEsImF2Z19jb2xvciI6IiM4NTQ5M0IiLCJzcmMiOnsib3JpZ2luYWwiOiJodHRwczovL2ltYWdlcy5wZXhlbHMuY29tL3Bob3Rvcy8xNDI4NjM0L3BleGVscy1waG90by0xNDI4NjM0LmpwZWciLCJsYXJnZTJ4IjoiaHR0cHM6Ly9pbWFnZXMucGV4ZWxzLmNvbS9waG90b3MvMTQyODYzNC9wZXhlbHMtcGhvdG8tMTQyODYzNC5qcGVnP2F1dG89Y29tcHJlc3NcdTAwMjZjcz10aW55c3JnYlx1MDAyNmRwcj0yXHUwMDI2aD02NTBcdTAwMjZ3PTk0MCIsImxhcmdlIjoiaHR0cHM6Ly9pbWFnZXMucGV4ZWxzLmNvbS9waG90b3MvMTQyODYzNC9wZXhlbHMtcGhvdG8tMTQyODYzNC5qcGVnP2F1dG89Y29tcHJlc3NcdTAwMjZjcz10aW55c3JnYlx1MDAyNmg9NjUwXHUwMDI2dz05NDAiLCJtZWRpdW0iOiJodHRwczovL2ltYWdlcy5wZXhlbHMuY29tL3Bob3Rvcy8xNDI4NjM0L3BleGVscy1waG90by0xNDI4NjM0LmpwZWc/YXV0bz1jb21wcmVzc1x1MDAyNmNzPXRpbnlzcmdiXHUwMDI2aD0zNTAiLCJzbWFsbCI6Imh0dHBzOi8vaW1hZ2VzLnBleGVscy5jb20vcGhvdG9zLzE0Mjg2MzQvcGV4ZWxzLXBob3RvLTE0Mjg2MzQuanBlZz9hdXRvPWNvbXByZXNzXHUwMDI2Y3M9dGlueXNyZ2JcdTAwMjZoPTEzMCIsInBvcnRyYWl0IjoiaHR0cHM6Ly9pbWFnZXMucGV4ZWxzLmNvbS9waG90b3MvMTQyODYzNC9wZXhlbHMtcGhvdG8tMTQyODYzNC5qcGVnP2F1dG89Y29tcHJlc3NcdTAwMjZjcz10aW55c3JnYlx1MDAyNmZpdD1jcm9wXHUwMDI2aD0xMjAwXHUwMDI2dz04MDAiLCJsYW5kc2NhcGUiOiJodHRwczovL2ltYWdlcy5wZXhlbHMuY29tL3Bob3Rvcy8xNDI4NjM0L3BleGVscy1waG90by0xNDI4NjM0LmpwZWc/YXV0bz1jb21wcmVzc1x1MDAyNmNzPXRpbnlzcmdiXHUwMDI2Zml0PWNyb3BcdTAwMjZoPTYyN1x1MDAyNnc9MTIwMCIsInRpbnkiOiJodHRwczovL2ltYWdlcy5wZXhlbHMuY29tL3Bob3Rvcy8xNDI4NjM0L3BleGVscy1waG90by0xNDI4NjM0LmpwZWc/YXV0bz1jb21wcmVzc1x1MDAyNmNzPXRpbnlzcmdiXHUwMDI2ZHByPTFcdTAwMjZmaXQ9Y3JvcFx1MDAyNmg9MjAwXHUwMDI2dz0yODAifSwibGlrZWQiOmZhbHNlfV0sInRvdGFsX3Jlc3VsdHMiOjgwMDAsIm5leHRfcGFnZSI6Imh0dHBzOi8vYXBpLnBleGVscy5jb20vdjEvc2VhcmNoLz9vcmllbnRhdGlvbj1sYW5kc2NhcGVcdTAwMjZwYWdlPTJcdTAwMjZwZXJfcGFnZT0xXHUwMDI2cXVlcnk9U3RldmVucytQb2ludCUyQytsYW5kc2NhcGUifQ==
+  recorded_at: Sun, 25 Apr 2021 17:48:16 GMT
+recorded_with: VCR 6.0.0

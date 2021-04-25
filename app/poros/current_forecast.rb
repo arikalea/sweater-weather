@@ -11,9 +11,9 @@ class CurrentForecast
               :icon
 
   def initialize(data)
-    @datetime = data[:dt]
-    @sunrise = data[:sunrise]
-    @sunset = data[:sunset]
+    @datetime = Time.at(data[:dt])
+    @sunrise = Time.at(data[:sunrise])
+    @sunset = Time.at(data[:sunset])
     @temperature = data[:temp]
     @feels_like = data[:feels_like]
     @humidity = data[:humidity]
