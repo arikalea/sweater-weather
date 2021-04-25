@@ -6,6 +6,10 @@ RSpec.describe 'Background Facade' do
       background = BackgroundFacade.get_background('Stevens Point')
 
       expect(background).to be_an(Image)
+      expect(background.id).to be_nil
+      expect(background.location).to be_a(String)
+      expect(background.url).to be_a(String)
+      expect(background.credit).to be_a(Hash)
     end
   end
 end
