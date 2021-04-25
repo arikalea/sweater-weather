@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.pexels.com/v1/search?orientation=landscape&per_page=1&query=denver,co,%20landscape
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - 563492ad6f91700001000001c8ce8de3332e40be9cdb1073b228da99
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Apr 2021 18:08:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '497'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cf_bm=830645d3c0d3dff460bd42331ab52cef18fa3e9f-1619374087-1800-AfGpbKk6ApcEh8M8gSfXv6ouvXuv5nuSNF295j3zMgCmHH5LXvn5nIPghulGgkoJkknQeOwjXX+6UVOWczwIHeg=;
+        path=/; expires=Sun, 25-Apr-21 18:38:07 GMT; domain=.pexels.com; HttpOnly;
+        Secure; SameSite=None
+      - __cf_bm=8940b9426945fdf29d2925937475a460a8a01b57-1619374087-1800-Aaeks6vjyywPCNrWfBJhremgyHjtcR7vIldbHsxDXCK+V8y7AlSLuHHvxNN2mym4PSpxG8ajqta7TeJiMZORimY=;
+        path=/; expires=Sun, 25-Apr-21 18:38:07 GMT; domain=.pexels.com; HttpOnly;
+        Secure; SameSite=None
+      - __cfduid=d7841ff9c25fd7a5bf235c1a03fac6dbc1619374087; expires=Tue, 25-May-21
+        18:08:07 GMT; path=/; domain=.pexels.com; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=d82901b119274440c75af8143257bb84f1619374087; expires=Tue, 25-May-21
+        18:08:07 GMT; path=/; domain=.pexels.com; HttpOnly; SameSite=Lax; Secure
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09abd0b51400003661b0be3000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - ALLOWALL
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19983'
+      X-Ratelimit-Reset:
+      - '1621889502'
+      X-Request-Id:
+      - '08dc0f9b-22fc-49ab-8a89-a92b7c159913'
+      X-Runtime:
+      - '0.143576'
+      X-Server:
+      - master
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 645983ce8a473661-LAX
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"per_page":1,"photos":[{"id":3047493,"width":4669,"height":3159,"url":"https://www.pexels.com/photo/scenic-view-of-the-mountains-with-green-pine-trees-beside-calm-body-of-water-3047493/","photographer":"Joshua
+        Woroniecki","photographer_url":"https://www.pexels.com/@joshuaworoniecki","photographer_id":1253228,"avg_color":"#537669","src":{"original":"https://images.pexels.com/photos/3047493/pexels-photo-3047493.jpeg","large2x":"https://images.pexels.com/photos/3047493/pexels-photo-3047493.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/3047493/pexels-photo-3047493.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/3047493/pexels-photo-3047493.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/3047493/pexels-photo-3047493.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/3047493/pexels-photo-3047493.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/3047493/pexels-photo-3047493.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/3047493/pexels-photo-3047493.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false}],"total_results":8000,"next_page":"https://api.pexels.com/v1/search/?orientation=landscape\u0026page=2\u0026per_page=1\u0026query=denver%2Cco%2C+landscape"}'
+  recorded_at: Sun, 25 Apr 2021 18:08:07 GMT
+recorded_with: VCR 6.0.0

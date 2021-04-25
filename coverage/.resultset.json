@@ -222,7 +222,9 @@
         "lines": [
           1,
           1,
-          null,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -232,8 +234,62 @@
           1,
           null
         ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/facades/background_facade.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/background_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/image.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1619369281
+    "timestamp": 1619374214
   }
 }
