@@ -12,6 +12,7 @@ RSpec.describe 'Forecast request' do
         expect(response.status).to eq(200)
         expect(forecast).to have_key(:data)
         expect(forecast[:data].keys).to eq([:id, :type, :attributes])
+        expect(forecast[:data][:attributes].count).to eq(4)
         expect(forecast[:data][:attributes].keys).to eq([:location, :current, :hourly, :daily])
         expect(forecast[:data][:attributes][:current].keys).to eq([:datetime, :sunrise, :sunset, :temperature, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon])
         expect(forecast[:data][:attributes][:current].keys).to_not eq([:pressure, :dew_point, :clouds])

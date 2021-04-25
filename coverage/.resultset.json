@@ -204,6 +204,17 @@
           null
         ]
       },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/spec/factories/users.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/arikablenker/turing/3module/projects/sweater-weather/config/routes.rb": {
         "lines": [
           1,
@@ -211,21 +222,29 @@
           1,
           1,
           1,
-          null,
+          1,
           1,
           null,
           null,
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/api/v1/backgrounds_controller.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/api/v1/users_controller.rb": {
         "lines": [
           1,
           1,
+          5,
+          5,
           1,
+          null,
+          4,
+          null,
+          null,
+          null,
           1,
           null,
           1,
+          5,
           null,
           null
         ]
@@ -236,61 +255,27 @@
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/facades/background_facade.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/models/user.rb": {
         "lines": [
           1,
           1,
           1,
           1,
           null,
+          1,
+          0,
+          null,
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/background_service.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/models/application_record.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/image.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/serializers/background_serializer.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/serializers/user_serializer.rb": {
         "lines": [
           1,
           1,
@@ -299,6 +284,6 @@
         ]
       }
     },
-    "timestamp": 1619376503
+    "timestamp": 1619386830
   }
 }
