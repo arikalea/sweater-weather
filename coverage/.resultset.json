@@ -224,6 +224,7 @@
           1,
           1,
           1,
+          null,
           1,
           null,
           null
@@ -288,8 +289,16 @@
           null,
           null
         ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/serializers/background_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1619374214
+    "timestamp": 1619376503
   }
 }
