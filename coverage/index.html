@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-04-26T10:25:13-06:00">2021-04-26T10:25:13-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-04-26T10:41:42-06:00">2021-04-26T10:41:42-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -73,7 +73,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#bdda0302b0936c8b107671dfd3553d92c8019d96" class="src_link" title="app/controllers/api/v1/salaries_controller.rb">app/controllers/api/v1/salaries_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">18</td>
+            <td class="cell--number">17</td>
             <td class="cell--number">7</td>
             <td class="cell--number">7</td>
             <td class="cell--number">0</td>
@@ -329,7 +329,7 @@
 
             
 
-            <code class="ruby">    tele_conn = Faraday.new(url: &#39;https://api.teleport.org/api&#39;)</code>
+            <code class="ruby">    tele_conn = Faraday.new(url: &#39;https://api.teleport.org/api/&#39;) do |f|</code>
           </li>
         </div>
       
@@ -340,18 +340,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="7">
+            
             
 
             
 
-            <code class="ruby">    tele_response = tele_conn.get(&quot;/urban_areas/slug:#{ua_id}/&quot;) do |f|</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -362,13 +362,13 @@
 
             
 
-            <code class="ruby">    # tele_response = tele_conn.get(&quot;/urban_areas/slug:#{ua_id}/salaries/&quot;) do |f|</code>
+            <code class="ruby">    tele_response = tele_conn.get(&quot;urban_areas/slug:#{ua_id}/salaries/&quot;) do |f|</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
             
 
             
@@ -400,8 +400,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="12">
+            
             
 
             
@@ -422,13 +422,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    #</code>
+            
+
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -439,7 +439,7 @@
 
             
 
-            <code class="ruby">    # response = Faraday.get(tele_parse)</code>
+            <code class="ruby">    </code>
           </li>
         </div>
       
@@ -450,23 +450,12 @@
 
             
 
-            <code class="ruby">    # parse = JSON.parse(response.body, symbolize_names: true)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
-            
-
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
