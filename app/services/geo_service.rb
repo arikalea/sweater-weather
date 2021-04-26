@@ -10,8 +10,6 @@ class GeoService
     # long = lat_long[:lng]
   end
 
-  private
-
   def self.conn
     Faraday.new(url: 'http://www.mapquestapi.com') do |f|
       f.params[:key] = ENV['GEO_KEY']

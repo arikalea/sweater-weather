@@ -9,8 +9,6 @@ class WeatherService
     parse(forecast_response)
   end
 
-  private
-
   def self.conn
     Faraday.new(url: 'https://api.openweathermap.org') do |f|
       f.params[:appid] = ENV['WEATHER_KEY']
