@@ -8,8 +8,6 @@ class BackgroundService
     parse(background_response)[:photos][0]
   end
 
-  private
-
   def self.conn
     Faraday.new(url: 'https://api.pexels.com/') do |f|
       f.headers['Authorization'] = ENV['PEXELS_KEY']
