@@ -7,8 +7,12 @@ RSpec.describe 'Teleport request' do
 
       salaries = JSON.parse(response.body, symbolize_names: true)
 
+      # require "pry";binding.pry
       expect(response).to be_successful
       expect(response.status).to eq(200)
+      expect(salaries).to have_key(:data)
+      expect(salaries[:data].keys).to eq([:id, :type, :attributes])
+      expect(salaries[:data][:attributes].keys).to eq([:destination, :forecast, :salaries])
     end
   end
 end
