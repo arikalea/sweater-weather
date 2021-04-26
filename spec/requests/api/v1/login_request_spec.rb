@@ -13,7 +13,7 @@ RSpec.describe 'User login request' do
       post '/api/v1/sessions', headers: headers, params: login_params.to_json
 
       login_json = JSON.parse(response.body, symbolize_names: true)
-      
+
       expect(response).to be_successful
       expect(response.status).to eq(200)
       expect(response.content_type).to eq("application/json")
@@ -23,6 +23,43 @@ RSpec.describe 'User login request' do
       expect(login_json[:data][:type]).to eq('user')
       expect(login_json[:data][:attributes][:email]).to eq(user.email)
       expect(login_json[:data][:attributes][:api_key]).to eq(user.api_key)
+    end
+  end
+
+  describe 'sad path' do
+    it 'does not login if email is not found' do
+      login_params = { email: 'turing@example.com',
+                       password: 'password' }
+
+      headers = {"CONTENT_TYPE" => "application/json",
+                 "ACCEPT" => "application/json"}
+
+      post '/api/v1/sessions', headers: headers, params: login_params.to_json
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(401)
+      expect(response.content_type).to eq("application/json")
+
+      bad_request_json = JSON.parse(response.body, symbolize_names: true)
+      expect(bad_request_json[:body]).to eq('Your credentials are incorrect')
+    end
+
+    it 'does not login if password is incorrect' do
+      user = create(:user)
+      login_params = { email: user.email,
+                       password: 'badpassword' }
+
+      headers = {"CONTENT_TYPE" => "application/json",
+                 "ACCEPT" => "application/json"}
+
+      post '/api/v1/sessions', headers: headers, params: login_params.to_json
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(401)
+      expect(response.content_type).to eq("application/json")
+
+      bad_request_json = JSON.parse(response.body, symbolize_names: true)
+      expect(bad_request_json[:body]).to eq('Your credentials are incorrect')
     end
   end
 end
