@@ -21,6 +21,9 @@ class Api::V1::SalariesController < ApplicationController
       jobs << job if job[:job][:title] == "Systems Administrator"
       jobs << job if job[:job][:title] == "Web Developer"
     end
+    forecast_data = ForecastFacade.get_forecast(ua_id)
+    forecast_summary = forecast_data.current.conditions
+    forecast_temp = forecast_data.current.temperature
     require "pry";binding.pry
   end
 end
