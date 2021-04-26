@@ -195,7 +195,7 @@
           null,
           null,
           1,
-          2,
+          1,
           null,
           null,
           null,
@@ -208,9 +208,9 @@
         "lines": [
           1,
           1,
-          2,
-          2,
-          2,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -231,7 +231,7 @@
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/models/user.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/map_quest_service.rb": {
         "lines": [
           1,
           1,
@@ -239,34 +239,28 @@
           1,
           null,
           1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           0,
           null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/models/application_record.rb": {
-        "lines": [
+          null,
           1,
-          1,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/api/v1/road_trips_controller.rb": {
-        "lines": [
+          2,
+          2,
+          null,
+          null,
+          null,
           1,
           1,
           null,
-          null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
           null
         ]
       }
     },
-    "timestamp": 1619474686
+    "timestamp": 1619476591
   }
 }
