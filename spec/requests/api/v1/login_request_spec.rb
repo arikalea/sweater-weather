@@ -61,5 +61,56 @@ RSpec.describe 'User login request' do
       bad_request_json = JSON.parse(response.body, symbolize_names: true)
       expect(bad_request_json[:body]).to eq('Your credentials are incorrect')
     end
+
+    it 'does not login if email is blank' do
+      user = create(:user)
+      login_params = { password: user.password }
+
+      headers = {"CONTENT_TYPE" => "application/json",
+                 "ACCEPT" => "application/json"}
+
+      post '/api/v1/sessions', headers: headers, params: login_params.to_json
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(401)
+      expect(response.content_type).to eq("application/json")
+
+      bad_request_json = JSON.parse(response.body, symbolize_names: true)
+      expect(bad_request_json[:body]).to eq('Missing email')
+    end
+
+    it 'does not login if password is blank' do
+      user = create(:user)
+      login_params = { email: user.email }
+
+      headers = {"CONTENT_TYPE" => "application/json",
+                 "ACCEPT" => "application/json"}
+
+      post '/api/v1/sessions', headers: headers, params: login_params.to_json
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(401)
+      expect(response.content_type).to eq("application/json")
+
+      bad_request_json = JSON.parse(response.body, symbolize_names: true)
+      expect(bad_request_json[:body]).to eq('Missing password')
+    end
+
+    it 'does not login if email and password are blank' do
+      user = create(:user)
+      login_params = { }
+
+      headers = {"CONTENT_TYPE" => "application/json",
+                 "ACCEPT" => "application/json"}
+
+      post '/api/v1/sessions', headers: headers, params: login_params.to_json
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(401)
+      expect(response.content_type).to eq("application/json")
+
+      bad_request_json = JSON.parse(response.body, symbolize_names: true)
+      expect(bad_request_json[:body]).to eq('Missing email and password')
+    end
   end
 end
