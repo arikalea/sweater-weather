@@ -3,6 +3,8 @@ class User < ApplicationRecord
   validates :password, presence: { require: true }
   has_secure_password
 
+  before_save :create_api_key
+  
   def create_api_key
     self.api_key = SecureRandom.uuid
   end

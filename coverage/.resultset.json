@@ -208,9 +208,9 @@
         "lines": [
           1,
           1,
-          9,
-          9,
-          9,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -231,6 +231,33 @@
           null
         ]
       },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/api/v1/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/Users/arikablenker/turing/3module/projects/sweater-weather/app/models/user.rb": {
         "lines": [
           1,
@@ -239,7 +266,9 @@
           1,
           null,
           1,
-          0,
+          null,
+          1,
+          1,
           null,
           null
         ]
@@ -251,159 +280,15 @@
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/api/v1/road_trips_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          4,
-          4,
-          4,
-          4,
-          null,
-          null,
-          1,
-          null,
-          1,
-          9,
-          0,
-          null,
-          9,
-          9,
-          3,
-          6,
-          2,
-          null,
-          null,
-          null,
-          null,
-          1,
-          14,
-          null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/road_trip.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          4,
-          4,
-          4,
-          4,
-          null,
-          null,
-          1,
-          4,
-          2,
-          2,
-          null,
-          2,
-          null,
-          null,
-          null,
-          1,
-          4,
-          2,
-          2,
-          2,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/facades/road_trip_facade.rb": {
-        "lines": [
-          1,
-          1,
-          4,
-          4,
-          4,
-          4,
-          4,
-          null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/map_quest_service.rb": {
-        "lines": [
-          1,
-          1,
-          4,
-          4,
-          null,
-          4,
-          null,
-          null,
-          1,
-          4,
-          4,
-          4,
-          null,
-          4,
-          null,
-          null,
-          1,
-          8,
-          8,
-          null,
-          null,
-          null,
-          1,
-          8,
-          null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/weather_service.rb": {
-        "lines": [
-          1,
-          1,
-          4,
-          4,
-          4,
-          4,
-          4,
-          null,
-          4,
-          null,
-          null,
-          1,
-          4,
-          4,
-          null,
-          null,
-          null,
-          1,
-          4,
-          null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/serializers/road_trip_serializer.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/serializers/user_serializer.rb": {
         "lines": [
           1,
           1,
           1,
-          5,
           null
         ]
       }
     },
-    "timestamp": 1619565390
+    "timestamp": 1619566374
   }
 }

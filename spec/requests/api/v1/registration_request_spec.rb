@@ -70,6 +70,7 @@ RSpec.describe 'User registration request' do
 
       expect(bad_request_json[:error]).to eq("Email has already been taken")
     end
+
     it 'does not create user if email is blank' do
       user_params = { email: '',
                       password: 'password',
@@ -88,6 +89,7 @@ RSpec.describe 'User registration request' do
 
       expect(bad_request_json[:error]).to eq("Email can't be blank and Email is invalid")
     end
+    
     it 'does not create user if password is blank' do
       user_params = { email: 'example@email.com',
                       password: '',
@@ -103,6 +105,7 @@ RSpec.describe 'User registration request' do
       expect(User.all.count).to eq(0)
 
       bad_request_json = JSON.parse(response.body, symbolize_names: true)
+
       expect(bad_request_json[:error]).to eq("Password can't be blank and Password can't be blank")
     end
   end
