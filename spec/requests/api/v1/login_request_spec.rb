@@ -27,6 +27,23 @@ RSpec.describe 'User login request' do
   end
 
   describe 'sad path' do
+    it 'does not login if email is incorrect format' do
+      login_params = { email: 'sample@',
+                       password: 'password' }
+
+      headers = {"CONTENT_TYPE" => "application/json",
+                 "ACCEPT" => "application/json"}
+
+      post '/api/v1/sessions', headers: headers, params: login_params.to_json
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(401)
+      expect(response.content_type).to eq("application/json")
+
+      bad_request_json = JSON.parse(response.body, symbolize_names: true)
+      expect(bad_request_json[:body]).to eq('Your credentials are incorrect')
+    end
+    
     it 'does not login if email is not found' do
       login_params = { email: 'turing@example.com',
                        password: 'password' }
