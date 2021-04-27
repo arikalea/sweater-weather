@@ -14,10 +14,16 @@ RSpec.describe 'Roadtrip request' do
         post '/api/v1/road_trip', headers: headers, params: roadtrip_params.to_json
 
         roadtrip_json = JSON.parse(response.body, symbolize_names: true)
-
+        
         expect(response).to be_successful
         expect(response.status).to eq(201)
         expect(response.content_type).to eq("application/json")
+        expect(roadtrip_json).to have_key(:data)
+        expect(roadtrip_json[:data].keys).to eq([:id, :type, :attributes])
+        expect(roadtrip_json[:data][:attributes].count).to eq(4)
+        expect(roadtrip_json[:data][:attributes].keys).to eq([:start_city, :end_city, :travel_time, :weather_at_eta])
+        expect(roadtrip_json[:data][:attributes][:weather_at_eta].keys).to eq([:temperature, :conditions])
+
       end
     end
   end
