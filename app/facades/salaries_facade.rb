@@ -1,5 +1,15 @@
 class SalariesFacade
-  def self.get_salary_info(ua_id)
-    salary_data = SalariesService.get_salary_info(ua_id)
+  attr_reader :destination,
+              :forecast,
+              :salaries
+
+  def initialize(destination)
+    @destination = destination
+    # @forecast =
+    # @salaries =
+  end
+
+  def self.get_salary_info(destination)
+    salary_data = SalariesService.get_salary_info(destination)
   end
 end
