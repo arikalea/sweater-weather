@@ -15,11 +15,11 @@ RSpec.describe 'Job poro' do
               }
           }
       job = Job.new(attrs)
-      
+
       expect(job).to be_a(Job)
       expect(job.title).to eq(attrs[:job][:title])
-      expect(job.min).to eq(attrs[:salary_percentiles][:percentile_25].round(2))
-      expect(job.max).to eq(attrs[:salary_percentiles][:percentile_75].round(2))
+      expect(job.min).to eq("$#{attrs[:salary_percentiles][:percentile_25].round(2)}")
+      expect(job.max).to eq("$#{attrs[:salary_percentiles][:percentile_75].round(2)}")
     end
   end
 end
