@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe SalariesService do
-  xit 'returns salaries for specific jobs' do
+  it 'returns salaries for specific jobs' do
     jobs = SalariesService.get_salary_info('denver')
 
     expect(jobs).to be_an(Array)
