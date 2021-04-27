@@ -7,6 +7,12 @@ RSpec.describe SalariesService do
     expect(jobs).to be_an(Array)
     expect(jobs.count).to eq(7)
     expect(jobs.first).to be_a(Job)
+
+    jobs.each do |job|
+      expect(job.title).to be_a(String)
+      expect(job.min).to be_a(String)
+      expect(job.max).to be_a(String)
+    end
   end
 
   it 'finds specific jobs' do
