@@ -231,7 +231,7 @@
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/api/v1/backgrounds_controller.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/api/v1/forecasts_controller.rb": {
         "lines": [
           1,
           1,
@@ -258,8 +258,17 @@
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/facades/background_facade.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/forecast.rb": {
         "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
           1,
           1,
           1,
@@ -268,8 +277,72 @@
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/background_service.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/facades/forecast_facade.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/map_quest_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/location.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/weather_service.rb": {
+        "lines": [
+          1,
           1,
           1,
           1,
@@ -292,7 +365,36 @@
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/image.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/current_forecast.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/hourly_forecast.rb": {
         "lines": [
           1,
           1,
@@ -301,25 +403,58 @@
           null,
           null,
           1,
+          8,
+          8,
+          8,
+          8,
+          null,
+          null,
           1,
           1,
-          1,
-          1,
+          8,
           null,
           null,
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/serializers/image_serializer.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/daily_forecast.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          null,
+          null,
+          1,
+          1,
+          5,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/serializers/forecast_serializer.rb": {
         "lines": [
           1,
           1,
           1,
-          2,
           null
         ]
       }
     },
-    "timestamp": 1619557787
+    "timestamp": 1619558764
   }
 }

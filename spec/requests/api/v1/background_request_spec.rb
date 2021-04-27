@@ -34,6 +34,7 @@ RSpec.describe 'Background request' do
         expect(response.status).to eq(400)
 
         bad_request_json = JSON.parse(response.body, symbolize_names: true)
+
         expect(bad_request_json[:error]).to eq('Your parameters are bad')
       end
     end
