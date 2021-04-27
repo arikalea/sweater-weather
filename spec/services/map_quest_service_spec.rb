@@ -17,14 +17,15 @@ RSpec.describe 'Map Quest Service' do
     end
   end
 
-  it 'can retrieve location coords based on location' do
+  it 'can retrieve road trip data based on origin and destination' do
     VCR.use_cassette('roadtrip') do
       road_trip_results = MapQuestService.road_trip_data('Reno, NV', 'Bozeman, MT')
-      require "pry";binding.pry
+      
       expect(road_trip_results).to be_a(Hash)
-      expect(road_trip_results).to have_key(:results)
-      expect(road_trip_results[:results]).to be_a(Array)
-
+      expect(road_trip_results).to have_key(:route)
+      expect(road_trip_results[:route]).to be_a(Hash)
+      expect(road_trip_results).to have_key(:info)
+      expect(road_trip_results[:info]).to be_a(Hash)
     end
   end
 end
