@@ -1,22 +1,24 @@
 class Api::V1::SessionsController < ApplicationController
+  before_action :validate_params
+
   def create
     user = User.find_by(email: session_params[:email])
-    if session_params[:email].nil? && session_params[:password].nil?
-      render json: { body: 'Missing email and password' }, status: :unauthorized
-    elsif session_params[:email].nil?
-      render json: { body: 'Missing email' }, status: :unauthorized
-    elsif session_params[:password].nil?
-      render json: { body: 'Missing password' }, status: :unauthorized
-    elsif user && user.authenticate(session_params[:password])
+    if user && user.authenticate(session_params[:password])
       render json: UserSerializer.new(user)
     elsif user && !user.authenticate(session_params[:password])
-      render json: { body: 'Your credentials are incorrect' }, status: :unauthorized
-    elsif user.nil?
-      render json: { body: 'Your credentials are incorrect' }, status: :unauthorized
+      render json: { error: 'Your credentials are bad' }, status: :unauthorized
+    else
+      render json: { error: 'Your credentials are bad' }, status: :unauthorized
     end
   end
 
   private
+
+  def validate_params
+    if request.body.read.blank?
+      render json: { error: 'Your credentials are bad' }, status: :bad_request
+    end
+  end
 
   def session_params
     params.permit(:email, :password)
