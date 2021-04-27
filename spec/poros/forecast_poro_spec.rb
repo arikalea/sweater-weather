@@ -4,7 +4,7 @@ RSpec.describe 'Forecast poro' do
   describe 'happy path' do
     it 'can create poro' do
       VCR.use_cassette('denver_forecast') do
-        location_data = GeoService.location_data('Denver')
+        location_data = MapQuestService.location_data('Denver')
         location = Location.new(location_data)
 
         forecast_data = WeatherService.get_forecast_by_coords(location.coordinates)

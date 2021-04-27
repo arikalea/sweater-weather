@@ -4,7 +4,7 @@ RSpec.describe 'Location Poro' do
   describe 'happy path' do
     it 'can create poro' do
       VCR.use_cassette('stevens_point') do
-        location_data = GeoService.location_data('Stevens Point')
+        location_data = MapQuestService.location_data('Stevens Point')
         location_poro = Location.new(location_data)
 
         expect(location_poro).to be_a(Location)
