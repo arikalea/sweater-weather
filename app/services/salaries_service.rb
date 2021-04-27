@@ -1,4 +1,4 @@
-class TeleportService
+class SalariesService
   def self.get_salary_info(ua_id)
     # tele_conn = Faraday.new(url: 'https://api.teleport.org/api/')
     # tele_parse = JSON.parse(tele_response.body, symbolize_names: true)

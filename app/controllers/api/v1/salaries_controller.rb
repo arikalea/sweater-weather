@@ -8,7 +8,7 @@ class Api::V1::SalariesController < ApplicationController
     #
     # tele_parse = JSON.parse(tele_response.body, symbolize_names: true)
     #
-    tele_info = TeleportFacade.get_salary_info(ua_id)
+    tele_info = SalariesFacade.get_salary_info(ua_id)
     jobs = []
     tele_info[:salaries].map do |job|
       jobs << job if job[:job][:title] == "Data Analyst"
