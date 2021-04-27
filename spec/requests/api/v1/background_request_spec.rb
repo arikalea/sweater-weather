@@ -7,14 +7,21 @@ RSpec.describe 'Background request' do
         get '/api/v1/backgrounds?location=denver,co'
 
         image = JSON.parse(response.body, symbolize_names: true)
-        
+
         expect(response).to be_successful
         expect(response.status).to eq(200)
         expect(image).to have_key(:data)
         expect(image[:data].keys).to eq([:id, :type, :attributes])
+        expect(image[:data][:id]).to eq('null')
+        expect(image[:data][:type]).to eq('image')
         expect(image[:data][:attributes].count).to eq(3)
         expect(image[:data][:attributes].keys).to eq([:location, :url, :credit])
+        expect(image[:data][:attributes][:location]).to be_a(String)
+        expect(image[:data][:attributes][:url]).to be_a(String)
+        expect(image[:data][:attributes][:credit]).to be_a(Hash)
         expect(image[:data][:attributes][:credit].keys).to eq([:source, :photographer])
+        expect(image[:data][:attributes][:credit][:source]).to be_a(String)
+        expect(image[:data][:attributes][:credit][:photographer]).to be_a(String)
       end
     end
   end
