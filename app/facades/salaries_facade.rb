@@ -5,8 +5,14 @@ class SalariesFacade
 
   def initialize(destination)
     @destination = destination
-    # @forecast =
+    @forecast = current_forecast
     # @salaries =
+  end
+
+  def current_forecast
+    forecast = ForecastFacade.get_forecast(@destination)
+    { summary: forecast.current.conditions,
+      temperature: "#{forecast.current.temperature} F" }
   end
 
   def self.get_salary_info(destination)
