@@ -8,7 +8,8 @@ class MapQuestService
 
   def self.road_trip_data(origin, destination)
     mq_response = conn.get('/directions/v2/route?') do |f|
-      f.params[:locations] = [ origin + destination ]
+      f.params[:from] = origin
+      f.params[:to] = destination
     end
     parse(mq_response)
   end

@@ -5,9 +5,8 @@ RSpec.describe 'Forecast Facade' do
     VCR.use_cassette('reno_road_trip') do
       origin = "Denver"
       destination = "Reno"
-      # road_trip = MapQuestService.road_trip_data(origin, destination)
       facade = RoadTripFacade.get_road_trip(origin, destination)
-      
+
       expect(facade).to be_a(RoadTrip)
       expect(facade.end_city).to be_a(String)
       expect(facade.end_city).to eq(destination)
