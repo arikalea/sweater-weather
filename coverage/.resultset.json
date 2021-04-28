@@ -208,9 +208,9 @@
         "lines": [
           1,
           1,
-          10,
-          10,
-          10,
+          6,
+          6,
+          6,
           null,
           null
         ]
@@ -241,7 +241,7 @@
           1,
           null,
           1,
-          9,
+          5,
           null,
           null
         ]
@@ -253,35 +253,32 @@
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/api/v1/road_trip_controller.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/controllers/api/v1/sessions_controller.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          4,
-          4,
-          4,
-          4,
-          null,
-          null,
+          7,
+          7,
           1,
-          null,
-          1,
-          10,
-          1,
-          null,
-          9,
-          9,
-          3,
           6,
           2,
           null,
+          4,
           null,
           null,
           null,
           1,
-          14,
+          null,
+          1,
+          8,
+          1,
+          null,
+          null,
+          null,
+          1,
+          12,
           null,
           null
         ]
@@ -292,120 +289,15 @@
           null
         ]
       },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/poros/road_trip.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          4,
-          4,
-          4,
-          4,
-          null,
-          null,
-          1,
-          4,
-          2,
-          2,
-          null,
-          2,
-          null,
-          null,
-          null,
-          1,
-          4,
-          2,
-          2,
-          2,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/facades/road_trip_facade.rb": {
-        "lines": [
-          1,
-          1,
-          4,
-          4,
-          4,
-          4,
-          4,
-          null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/map_quest_service.rb": {
-        "lines": [
-          1,
-          1,
-          4,
-          4,
-          null,
-          4,
-          null,
-          null,
-          1,
-          4,
-          4,
-          4,
-          null,
-          4,
-          null,
-          null,
-          1,
-          8,
-          8,
-          null,
-          null,
-          null,
-          1,
-          8,
-          null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/services/weather_service.rb": {
-        "lines": [
-          1,
-          1,
-          4,
-          4,
-          4,
-          4,
-          4,
-          null,
-          4,
-          null,
-          null,
-          1,
-          4,
-          4,
-          null,
-          null,
-          null,
-          1,
-          4,
-          null,
-          null
-        ]
-      },
-      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/serializers/road_trip_serializer.rb": {
+      "/Users/arikablenker/turing/3module/projects/sweater-weather/app/serializers/user_serializer.rb": {
         "lines": [
           1,
           1,
           1,
-          5,
           null
         ]
       }
     },
-    "timestamp": 1619570481
+    "timestamp": 1619570678
   }
 }
