@@ -44,6 +44,20 @@ RSpec.describe 'User login request' do
       expect(bad_request_json[:error]).to eq('Your credentials are bad')
     end
 
+    it 'does not login if body is empty' do
+      headers = {"CONTENT_TYPE" => "application/json",
+                 "ACCEPT" => "application/json"}
+
+      post '/api/v1/sessions', headers: headers
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(response.content_type).to eq("application/json")
+
+      bad_request_json = JSON.parse(response.body, symbolize_names: true)
+      expect(bad_request_json[:error]).to eq('Your credentials are bad')
+    end
+
     it 'does not login if email is not found' do
       login_params = { email: 'turing@example.com',
                        password: 'password' }

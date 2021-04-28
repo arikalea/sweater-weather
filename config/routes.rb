@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api do
     namespace :v1 do
-      get 'forecast', to: 'forecasts#show'
-      get 'backgrounds', to: 'backgrounds#show'
-      post 'users', to: 'users#create'
-      post 'sessions', to: 'sessions#create'
-      post 'road_trip', to: 'road_trips#create'
+      resources :forecast, only: :index
+      resources :backgrounds, only: :index
+      resources :users, only: :create
+      resources :sessions, only: :create
+      resources :road_trip, only: :create
     end
   end
 end

@@ -30,6 +30,21 @@ RSpec.describe 'User registration request' do
   end
 
   describe 'sad path' do
+    it 'does not create user if body is empty' do
+      headers = {"CONTENT_TYPE" => "application/json",
+                 "ACCEPT" => "application/json"}
+
+      post '/api/v1/users', headers: headers
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(User.all.count).to eq(0)
+
+      bad_request_json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(bad_request_json[:error]).to eq('Must provide request body')
+    end
+
     it 'does not create user if passwords dont match' do
       user_params = { email: 'example@email.com',
                       password: 'password',
@@ -89,7 +104,7 @@ RSpec.describe 'User registration request' do
 
       expect(bad_request_json[:error]).to eq("Email can't be blank and Email is invalid")
     end
-    
+
     it 'does not create user if password is blank' do
       user_params = { email: 'example@email.com',
                       password: '',
