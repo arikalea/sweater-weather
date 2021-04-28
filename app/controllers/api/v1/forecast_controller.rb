@@ -10,8 +10,6 @@ class Api::V1::ForecastController < ApplicationController
   private
 
   def validate_params
-    if params[:location].blank?
-      render json: { error: 'Your parameters are bad' }, status: :bad_request
-    end
+    render json: { error: 'Your parameters are bad' }, status: :bad_request if params[:location].blank?
   end
 end

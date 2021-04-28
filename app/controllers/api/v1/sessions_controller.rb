@@ -15,9 +15,7 @@ class Api::V1::SessionsController < ApplicationController
   private
 
   def validate_params
-    if request.body.read.blank?
-      render json: { error: 'Your credentials are bad' }, status: :bad_request
-    end
+    render json: { error: 'Your credentials are bad' }, status: :bad_request if request.body.read.blank?
   end
 
   def session_params

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-04-27T18:46:43-06:00">2021-04-27T18:46:43-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-04-27T18:50:48-06:00">2021-04-27T18:50:48-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>773</b> relevant lines,
-    <span class="green"><b>773</b> lines covered</span> and
+    <b>769</b> relevant lines,
+    <span class="green"><b>769</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -73,22 +73,22 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#b70b30b3ce489322c4ef38df86cc4e1f87c1d8f8" class="src_link" title="app/controllers/api/v1/backgrounds_controller.rb">app/controllers/api/v1/backgrounds_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">10</td>
+            <td class="cell--number">15</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.10</td>
+            <td class="cell--number">1.11</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#ad6630ba2cde68c1597765bc1bf2b86ba9adfb4e" class="src_link" title="app/controllers/api/v1/forecast_controller.rb">app/controllers/api/v1/forecast_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">10</td>
+            <td class="cell--number">15</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.10</td>
+            <td class="cell--number">1.11</td>
             
           </tr>
         
@@ -106,22 +106,22 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#00013ed2cf7ed391db8c2b34ac09d2a7d8234940" class="src_link" title="app/controllers/api/v1/sessions_controller.rb">app/controllers/api/v1/sessions_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">26</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">15</td>
+            <td class="cell--number">24</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">14</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.60</td>
+            <td class="cell--number">3.79</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#649af2bcb06d8a5e1fb878a6aa7de7bddaaa06ad" class="src_link" title="app/controllers/api/v1/users_controller.rb">app/controllers/api/v1/users_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">24</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">13</td>
+            <td class="cell--number">22</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">12</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.54</td>
+            <td class="cell--number">2.67</td>
             
           </tr>
         
@@ -260,7 +260,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#730b800483140bbbffb30d5cb4845ec1a9399130" class="src_link" title="app/poros/road_trip.rb">app/poros/road_trip.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">32</td>
+            <td class="cell--number">33</td>
             <td class="cell--number">17</td>
             <td class="cell--number">17</td>
             <td class="cell--number">0</td>
@@ -717,8 +717,8 @@
     
 
     <div class="t-line-summary">
-      <b>10</b> relevant lines.
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -868,34 +868,12 @@
 
             
 
-            <code class="ruby">    if params[:location].blank?</code>
+            <code class="ruby">    render json: { error: &#39;Your parameters are bad&#39; }, status: :bad_request if params[:location].blank?</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      render json: { error: &#39;Your parameters are bad&#39; }, status: :bad_request</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
@@ -906,7 +884,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -935,8 +913,8 @@
     
 
     <div class="t-line-summary">
-      <b>10</b> relevant lines.
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1086,34 +1064,12 @@
 
             
 
-            <code class="ruby">    if params[:location].blank?</code>
+            <code class="ruby">    render json: { error: &#39;Your parameters are bad&#39; }, status: :bad_request if params[:location].blank?</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      render json: { error: &#39;Your parameters are bad&#39; }, status: :bad_request</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
@@ -1124,7 +1080,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -1503,8 +1459,8 @@
     
 
     <div class="t-line-summary">
-      <b>15</b> relevant lines.
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>14</b> relevant lines.
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1709,18 +1665,18 @@
 
             
 
-            <code class="ruby">    if request.body.read.blank?</code>
+            <code class="ruby">    render json: { error: &#39;Your credentials are bad&#39; }, status: :bad_request if request.body.read.blank?</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="19">
+            
             
 
             
 
-            <code class="ruby">      render json: { error: &#39;Your credentials are bad&#39; }, status: :bad_request</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1731,34 +1687,12 @@
 
             
 
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
+          <li class="covered" data-hits="1" data-linenumber="21">
             <span class="hits">1</span>
             
 
@@ -1769,7 +1703,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="24">
+          <li class="covered" data-hits="12" data-linenumber="22">
             <span class="hits">12</span>
             
 
@@ -1780,7 +1714,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="23">
             
             
 
@@ -1791,7 +1725,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -1820,8 +1754,8 @@
     
 
     <div class="t-line-summary">
-      <b>13</b> relevant lines.
-      <span class="green"><b>13</b> lines covered</span> and
+      <b>12</b> relevant lines.
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1927,7 +1861,7 @@
 
             
 
-            <code class="ruby">      render json: { error: user.errors.full_messages.to_sentence }, status: 400</code>
+            <code class="ruby">      render json: { error: user.errors.full_messages.to_sentence }, status: :bad_request</code>
           </li>
         </div>
       
@@ -2004,18 +1938,18 @@
 
             
 
-            <code class="ruby">    if request.body.read.blank?</code>
+            <code class="ruby">    render json: { error: &#39;Must provide request body&#39; }, status: :bad_request if request.body.read.blank?</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="17">
+            
             
 
             
 
-            <code class="ruby">      render json: { error: &#39;Must provide request body&#39; }, status: :bad_request</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2026,34 +1960,12 @@
 
             
 
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
+          <li class="covered" data-hits="1" data-linenumber="19">
             <span class="hits">1</span>
             
 
@@ -2064,7 +1976,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="22">
+          <li class="covered" data-hits="5" data-linenumber="20">
             <span class="hits">5</span>
             
 
@@ -2075,7 +1987,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
@@ -2086,7 +1998,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="22">
             
             
 
@@ -2707,7 +2619,7 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4365,7 +4277,7 @@
 
             
 
-            <code class="ruby">      time = road_trip_data[:route][:formattedTime].split(&quot;:&quot;)</code>
+            <code class="ruby">      time = road_trip_data[:route][:formattedTime].split(&#39;:&#39;)</code>
           </li>
         </div>
       
@@ -4398,7 +4310,7 @@
 
             
 
-            <code class="ruby">      &quot;This route is impossible.&quot;</code>
+            <code class="ruby">      &#39;This route is impossible.&#39;</code>
           </li>
         </div>
       
@@ -4453,18 +4365,18 @@
 
             
 
-            <code class="ruby">    return {} if !road_trip_data[:info][:messages].blank?</code>
+            <code class="ruby">    return {} if road_trip_data[:info][:messages].present?</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="25">
-            <span class="hits">4</span>
+          <li class="never" data-hits="" data-linenumber="25">
+            
             
 
             
 
-            <code class="ruby">    arrival_time = ((road_trip_data[:route][:time] / 60) / 60).round</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4475,7 +4387,7 @@
 
             
 
-            <code class="ruby">    arrival_weather = forecast_data[:hourly][arrival_time]</code>
+            <code class="ruby">    arrival_time = ((road_trip_data[:route][:time] / 60) / 60).round</code>
           </li>
         </div>
       
@@ -4486,18 +4398,18 @@
 
             
 
-            <code class="ruby">      {</code>
+            <code class="ruby">    arrival_weather = forecast_data[:hourly][arrival_time]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
+          <li class="covered" data-hits="4" data-linenumber="28">
+            <span class="hits">4</span>
             
 
-            <code class="ruby">        temperature: arrival_weather[:temp],</code>
+            
+
+            <code class="ruby">    {</code>
           </li>
         </div>
       
@@ -4508,7 +4420,7 @@
 
             
 
-            <code class="ruby">        conditions: arrival_weather[:weather][0][:description]</code>
+            <code class="ruby">      temperature: arrival_weather[:temp],</code>
           </li>
         </div>
       
@@ -4519,7 +4431,7 @@
 
             
 
-            <code class="ruby">      }</code>
+            <code class="ruby">      conditions: arrival_weather[:weather][0][:description]</code>
           </li>
         </div>
       
@@ -4530,12 +4442,23 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    }</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
             
             
 
