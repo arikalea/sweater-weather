@@ -12,7 +12,7 @@ class Api::V1::RoadTripController < ApplicationController
 
   def validate_params
     if request.body.read.blank?
-      render json: { error: user.errors.full_messages.to_sentence }, status: :bad_request
+      render json: { error: 'Must provide request body' }, status: :bad_request
     else
       params = JSON.parse(request.body.read, symbolize_names: true)
       if params[:origin].blank? || params[:destination].blank?

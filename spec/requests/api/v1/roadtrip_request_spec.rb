@@ -89,6 +89,20 @@ RSpec.describe 'Roadtrip request' do
       expect(bad_request_json[:error]).to eq("Must provide valid API key")
     end
 
+    it 'unsuccessful request with empty request body' do
+      headers = {"CONTENT_TYPE" => "application/json",
+                 "ACCEPT" => "application/json"}
+      post '/api/v1/road_trip', headers: headers
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(response.content_type).to eq("application/json")
+
+      bad_request_json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(bad_request_json[:error]).to eq('Must provide request body')
+    end
+
     it 'unsuccessful request without request body' do
       roadtrip_params = { api_key: @user.api_key }
 
