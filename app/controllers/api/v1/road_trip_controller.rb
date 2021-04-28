@@ -1,4 +1,4 @@
-class Api::V1::RoadTripsController < ApplicationController
+class Api::V1::RoadTripController < ApplicationController
   before_action :validate_params
 
   def create

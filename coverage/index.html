@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-04-27T17:54:41-06:00">2021-04-27T17:54:41-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-04-27T18:36:20-06:00">2021-04-27T18:36:20-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -82,7 +82,7 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#c5cb29f04bf6c669725619c9fad6e6b218ae7a5a" class="src_link" title="app/controllers/api/v1/forecasts_controller.rb">app/controllers/api/v1/forecasts_controller.rb</a></td>
+            <td class="strong t-file__name"><a href="#ad6630ba2cde68c1597765bc1bf2b86ba9adfb4e" class="src_link" title="app/controllers/api/v1/forecast_controller.rb">app/controllers/api/v1/forecast_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">17</td>
             <td class="cell--number">10</td>
@@ -93,7 +93,7 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#ea3a32158220653c05f8b8c9a5bf2d58421b11d7" class="src_link" title="app/controllers/api/v1/road_trips_controller.rb">app/controllers/api/v1/road_trips_controller.rb</a></td>
+            <td class="strong t-file__name"><a href="#3d47b49d902af3844e66e3a3e4f7e5fe0db805e1" class="src_link" title="app/controllers/api/v1/road_trip_controller.rb">app/controllers/api/v1/road_trip_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">94.44 %</td>
             <td class="cell--number">29</td>
             <td class="cell--number">18</td>
@@ -469,7 +469,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d48e65b24fe0145c3d2e0020d87edb6ef9125200" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">12</td>
+            <td class="cell--number">17</td>
             <td class="cell--number">8</td>
             <td class="cell--number">8</td>
             <td class="cell--number">0</td>
@@ -769,7 +769,7 @@
 
             
 
-            <code class="ruby">  def show</code>
+            <code class="ruby">  def index</code>
           </li>
         </div>
       
@@ -921,9 +921,9 @@
 </div>
 
       
-        <div class="source_table" id="c5cb29f04bf6c669725619c9fad6e6b218ae7a5a">
+        <div class="source_table" id="ad6630ba2cde68c1597765bc1bf2b86ba9adfb4e">
   <div class="header">
-    <h3>app/controllers/api/v1/forecasts_controller.rb</h3>
+    <h3>app/controllers/api/v1/forecast_controller.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -954,7 +954,7 @@
 
             
 
-            <code class="ruby">class Api::V1::ForecastsController &lt; ApplicationController</code>
+            <code class="ruby">class Api::V1::ForecastController &lt; ApplicationController</code>
           </li>
         </div>
       
@@ -987,7 +987,7 @@
 
             
 
-            <code class="ruby">  def show</code>
+            <code class="ruby">  def index</code>
           </li>
         </div>
       
@@ -1139,9 +1139,9 @@
 </div>
 
       
-        <div class="source_table" id="ea3a32158220653c05f8b8c9a5bf2d58421b11d7">
+        <div class="source_table" id="3d47b49d902af3844e66e3a3e4f7e5fe0db805e1">
   <div class="header">
-    <h3>app/controllers/api/v1/road_trips_controller.rb</h3>
+    <h3>app/controllers/api/v1/road_trip_controller.rb</h3>
     <h4>
       <span class="green">
   94.44%
@@ -1172,7 +1172,7 @@
 
             
 
-            <code class="ruby">class Api::V1::RoadTripsController &lt; ApplicationController</code>
+            <code class="ruby">class Api::V1::RoadTripController &lt; ApplicationController</code>
           </li>
         </div>
       
@@ -7863,62 +7863,117 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">      # get &#39;forecast&#39;, to: &#39;forecasts#show&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">      # get &#39;backgrounds&#39;, to: &#39;backgrounds#show&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">      # post &#39;users&#39;, to: &#39;users#create&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">      # post &#39;sessions&#39;, to: &#39;sessions#create&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">      # post &#39;road_trip&#39;, to: &#39;road_trips#create&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      get &#39;forecast&#39;, to: &#39;forecasts#show&#39;</code>
+            <code class="ruby">      resources :forecast, only: :index</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
+          <li class="covered" data-hits="1" data-linenumber="11">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      get &#39;backgrounds&#39;, to: &#39;backgrounds#show&#39;</code>
+            <code class="ruby">      resources :backgrounds, only: :index</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="12">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      post &#39;users&#39;, to: &#39;users#create&#39;</code>
+            <code class="ruby">      resources :users, only: :create</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
+          <li class="covered" data-hits="1" data-linenumber="13">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      post &#39;sessions&#39;, to: &#39;sessions#create&#39;</code>
+            <code class="ruby">      resources :sessions, only: :create</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="14">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      post &#39;road_trip&#39;, to: &#39;road_trips#create&#39;</code>
+            <code class="ruby">      resources :road_trip, only: :create</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -7929,7 +7984,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -7940,7 +7995,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 

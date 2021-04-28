@@ -1,7 +1,7 @@
 class Api::V1::BackgroundsController < ApplicationController
   before_action :validate_params
 
-  def show
+  def index
     location = params[:location]
     background_data = BackgroundFacade.get_background(location)
     render json: ImageSerializer.new(background_data)
