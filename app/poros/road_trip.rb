@@ -13,20 +13,21 @@ class RoadTrip
 
   def get_travel_time(road_trip_data)
     if road_trip_data[:info][:messages].blank?
-      time = road_trip_data[:route][:formattedTime].split(":")
+      time = road_trip_data[:route][:formattedTime].split(':')
       "#{time[0]} hours, #{time[1]} minutes"
     else
-      "This route is impossible."
+      'This route is impossible.'
     end
   end
 
   def get_weather(road_trip_data, forecast_data)
-    return {} if !road_trip_data[:info][:messages].blank?
+    return {} if road_trip_data[:info][:messages].present?
+
     arrival_time = ((road_trip_data[:route][:time] / 60) / 60).round
     arrival_weather = forecast_data[:hourly][arrival_time]
-      {
-        temperature: arrival_weather[:temp],
-        conditions: arrival_weather[:weather][0][:description]
-      }
+    {
+      temperature: arrival_weather[:temp],
+      conditions: arrival_weather[:weather][0][:description]
+    }
   end
 end
