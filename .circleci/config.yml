@@ -1,0 +1,24 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.3-stretch-node
+    working_directory: ~/sweater-weather
+    executor: ruby/default
+    steps:
+      - checkout
+      - run: gem install bundler -v 2.2.8
+      - run: bundle install
+      - run: bundle exec rake db:create db:schema:load
+      - run:
+          name: Run tests
+          command: bundle exec rspec
+      - run: mkdir ~/rspec
+      - run:
+          command: bundle exec rspec --format progress --format RspecJunitFormatter -o ~/rspec/rspec.xml
+          when: always
+      - store_test_results:
+          path: ~/rspec
