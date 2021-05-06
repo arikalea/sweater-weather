@@ -24,7 +24,6 @@ jobs:
       - checkout
       - run: gem install bundler -v 2.2.8
       - run: bundle install
-      - run: bundle exec rake db:create
       - run:
           name: Run tests
           command: bundle exec rspec
