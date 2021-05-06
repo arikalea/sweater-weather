@@ -6,13 +6,25 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.5.3-stretch-node
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: 127.0.0.1
+          PGUSER: postgres
+          RAILS_ENV: test
+      - image: circleci/postgres:12.1
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: sweater-weather_test
+          POSTGRES_PASSWORD: ENV['SWEATER_WEATHER_DB_PASSWORD']
     working_directory: ~/sweater-weather
     executor: ruby/default
     steps:
       - checkout
       - run: gem install bundler -v 2.2.8
       - run: bundle install
-      - run: bundle exec rake db:create db:schema:load
+      - run: bundle exec rake db:create
       - run:
           name: Run tests
           command: bundle exec rspec
