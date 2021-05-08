@@ -6,14 +6,11 @@ jobs:
   build:
     working_directory: ~/sweater-weather
     docker:
-#       - image: circleci/ruby:2.5.3-stretch-node
-#         environment:
-#           BUNDLE_JOBS: 3
-#           BUNDLE_RETRY: 3
-#           BUNDLE_PATH: vendor/bundle
-#           PGHOST: 127.0.0.1
-#           PGUSER: root
-#           RAILS_ENV: test
+      - image: circleci/ruby:2.5.3-stretch-node
+        environment:
+          PGHOST: localhost
+          PGUSER: sweater-weather
+          RAILS_ENV: test
       - image: circleci/postgres:12.1
         environment:
           POSTGRES_USER: arikablenker
@@ -23,7 +20,7 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
-      - run: gem install bundler -v 2.2.8
+      - run: bundler -v 
       - run: bundle install
-      - run: bundle exec rake db:setup
+      - run: bundle exec rails db:{drop,create,migrate}
       - run: bundle exec rspec
