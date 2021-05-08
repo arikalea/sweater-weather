@@ -23,14 +23,7 @@ jobs:
     steps:
       - checkout
       - run: gem install bundler -v 2.2.8
-      - run: bundle install
-      # - run: bundle exec rake db:create db:schema:load
-      # - run:
-      #     name: Run tests
-      #     command: bundle exec rspec
-      # - run: mkdir ~/rspec
-      # - run:
-      #     command: bundle exec rspec --format progress --format RspecJunitFormatter -o ~/rspec/rspec.xml
-      #     when: always
-      # - store_test_results:
-      #     path: ~/rspec
+      - run: bundle install --path vendor/bundle
+      - run: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run: bundle exec rake db:setup
+      - run: bundle exec rspec
