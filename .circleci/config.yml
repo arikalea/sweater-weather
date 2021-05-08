@@ -20,11 +20,6 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
-      - run: 
-          name: sweater-weather
-          command: bundle -v
-      - ruby/bundle-install
-      - checkout
       - run: gem install bundler -v 2.2.8
       - run: bundle install --path vendor/bundle
       - run: dockerize -wait tcp://localhost:5432 -timeout 1m
