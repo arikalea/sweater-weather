@@ -24,5 +24,6 @@ jobs:
       - checkout
       - run: gem install bundler -v 2.2.8
       - run: bundle install
+#  Couldn't figure out how to get this part to pass 
 #       - run: bundle exec rails db:{drop,create,migrate}
 #       - run: bundle exec rspec
