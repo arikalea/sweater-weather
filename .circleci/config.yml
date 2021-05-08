@@ -9,7 +9,7 @@ jobs:
       - image: circleci/ruby:2.5.3
         environment:
           PGHOST: localhost
-          PGUSER: sweater_weather
+          PGUSER: sweater-weather
           RAILS_ENV: test
       - image: postgres:13.2
         environment:
