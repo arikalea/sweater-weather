@@ -4,23 +4,26 @@ orbs:
 
 jobs:
   build:
+    working_directory: ~/sweater-weather
     docker:
-      - image: circleci/ruby:2.5.3-stretch-node
+      - image: circleci/ruby:2.5.3
         environment:
-          BUNDLE_JOBS: 3
-          BUNDLE_RETRY: 3
-          BUNDLE_PATH: vendor/bundle
-          PGHOST: 127.0.0.1
-          PGUSER: postgres
+          PGHOST: localhost
+          PGUSER: sweater_weather
           RAILS_ENV: test
-      - image: circleci/postgres:12.1
+      - image: postgres:13.2
         environment:
           POSTGRES_USER: arikablenker
           POSTGRES_DB: sweater-weather_test
           POSTGRES_PASSWORD: ENV['SWEATER_WEATHER_DB_PASSWORD']
-    working_directory: ~/sweater-weather
+
     executor: ruby/default
     steps:
+      - checkout
+      - run: 
+          name: sweater-weather
+          command: bundle -v
+      - ruby/bundle-install
       - checkout
       - run: gem install bundler -v 2.2.8
       - run: bundle install --path vendor/bundle
