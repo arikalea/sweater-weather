@@ -6,14 +6,14 @@ jobs:
   build:
     working_directory: ~/sweater-weather
     docker:
-      - image: circleci/ruby:2.5.3-stretch-node
-        environment:
-          BUNDLE_JOBS: 3
-          BUNDLE_RETRY: 3
-          BUNDLE_PATH: vendor/bundle
-          PGHOST: 127.0.0.1
-          PGUSER: root
-          RAILS_ENV: test
+#       - image: circleci/ruby:2.5.3-stretch-node
+#         environment:
+#           BUNDLE_JOBS: 3
+#           BUNDLE_RETRY: 3
+#           BUNDLE_PATH: vendor/bundle
+#           PGHOST: 127.0.0.1
+#           PGUSER: root
+#           RAILS_ENV: test
       - image: circleci/postgres:12.1
         environment:
           POSTGRES_USER: arikablenker
