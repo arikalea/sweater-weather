@@ -20,7 +20,7 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
-      - run: bundler -v 
+      - run: gem install bundler -v 2.2.8 
       - run: bundle install
       - run: bundle exec rails db:{drop,create,migrate}
       - run: bundle exec rspec
