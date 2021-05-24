@@ -32,9 +32,9 @@ Your team is working in a service-oriented architecture. The front-end will comm
     * [Pexels](https://www.pexels.com/api/?locale=en-US) (click 'Get Started')
 6. add the API keys you obtained to `application.yml`:
     ```
-    MAPQUEST_API_KEY: <your mapquest key>
-    OPEN_WEATHER_API_KEY: <your openweather key>
-    PEXELS_API_KEY: <your pexels key>
+    GEO_KEY: <your mapquest key>
+    WEATHER_KEY: <your openweather key>
+    PEXELS_KEY: <your pexels key>
     ```
 7. run `rails s` and explore the endpoints below!
 8. run the test suite: `bundle exec rspec`
